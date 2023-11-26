@@ -1,3 +1,21 @@
+## Preface
+
+After forking [the project from xmfbit](https://github.com/xmfbit/DQN-FlappyBird), I slightly modified a few bits of syntax to make it work under python3. I successfully ran the project on my own laptop, and this is the version of some of the dependencies I used:
+
+dependencies:
+  - numpy=1.26.0=py311hdab7c0b_0
+  - numpy-base=1.26.0=py311hd01c5d8_0
+  - python=3.11.5=he1021f5_0
+  - pip:
+      - pygame==2.5.2
+      - torch==2.1.0+cu121
+      - torchaudio==2.1.0+cu121
+      - torchvision==0.16.0+cu121
+
+The following is the content of the README from the original author, [xmfbit](https://github.com/xmfbit).
+
+------
+
 ## Flappy Bird With DQN
 
 DQN is a technology to realize reinforcement learning, first proposed by Deep Mind in NIPS13([paper in arxiv](https://arxiv.org/pdf/1312.5602v1.pdf)), whose input is raw pixels and whose output is a value function estimating future rewards. Using Experience Replay, they overcame the problem of network training.
