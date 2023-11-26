@@ -1,6 +1,6 @@
 ## Preface
 
-After forking [the project from xmfbit](https://github.com/xmfbit/DQN-FlappyBird), I slightly modified a few bits of syntax to make it work under python3. I successfully ran the project on my own laptop, and this is the version of some of the dependencies I used:
+After forking [the project from xmfbit](https://github.com/xmfbit/DQN-FlappyBird), I slightly modified a few bits of syntax to make it work under python3. I successfully ran the project on my own laptop, and here are the versions of some of the dependencies I used:
 
 dependencies:
   - numpy=1.26.0=py311hdab7c0b_0
