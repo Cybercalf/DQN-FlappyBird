@@ -58,6 +58,24 @@ class GameState:
         self.playerFlapped = False  # True when player flaps
 
     def frame_step(self, input_actions):
+        '''
+        每一帧下的游戏处理
+        '''
+
+        '''
+        pygame.event.pump()
+        功能：内部进程pygame事件处理程序
+        属性：pump() -> None
+
+        对于游戏的每一帧，都需要对事件队列进行某种调用。这可以确保程序可以与操作系统的其他部分进行内部交互。如果在游戏中不使用其他事件函数，则应调用 pygame.event.pump() 允许pygame处理内部操作。
+
+        如果您的程序通过其他 pygame.event 函数处理队列上的事件，则不需要此函数功能。
+        在事件队列中有一些重要的事情必须在内部处理。主窗口可能需要重新喷绘或响应系统。如果调用事件队列的时间过长，系统可能会确定您的程序已锁定。
+
+        注意：此函数只应在初始化 pygame.display 的线程中调用。
+        
+        原文链接：https://blog.csdn.net/Rita_Aloha/article/details/106233187
+        '''
         pygame.event.pump()
 
         reward = 0.1

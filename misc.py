@@ -86,7 +86,7 @@ def train_dqn(model, options, resume):
     flappyBird = game.GameState()
     optimizer = optim.RMSprop(model.parameters(), lr=options.lr)
     ceriterion = nn.MSELoss()
-
+ 
     action = [1, 0]
     o, r, terminal = flappyBird.frame_step(action)
     o = preprocess(o)
