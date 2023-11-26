@@ -38,6 +38,9 @@ parser.add_argument('--save_checkpoint_freq', type=int,
                     help='episode interval to save checkpoint', default=2000)
 
 if __name__ == '__main__':
+    '''
+    解析传入参数，针对部分情况给出错误信息
+    '''
     args = parser.parse_args()
     if args.cuda and not torch.cuda.is_available():
         print('CUDA is not availale, maybe you should not set --cuda')
@@ -47,10 +50,12 @@ if __name__ == '__main__':
         sys.exit(1)
     if args.cuda:
         print('With GPU support!')
+    # 训练环境。如果给定了预训练模型，则在指定模型的基础上继续训练，否则从头开始训练一个模型
     if args.train:
         model = BrainDQN(epsilon=args.init_e,
                          mem_size=args.memory_size, cuda=args.cuda)
         resume = not args.weight == ''
         train_dqn(model, args, resume)
+    # 非训练环境。必须给定一个预训练模型。
     else:
         play_game(args.weight, args.cuda, True)
