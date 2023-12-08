@@ -43,7 +43,7 @@ if __name__ == '__main__':
     '''
     args = parser.parse_args()
     if args.cuda and not torch.cuda.is_available():
-        print('CUDA is not availale, maybe you should not set --cuda')
+        print('CUDA is not available, maybe you should not set --cuda')
         sys.exit(1)
     if not args.train and args.weight == '':
         print('When test, a pretrained weight model file should be given')
