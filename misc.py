@@ -50,7 +50,7 @@ def load_checkpoint(filename, model):
     try:
         checkpoint = torch.load(filename)
     except:
-        # load weight saved on gpy device to cpu device
+        # load weight saved on gpu device to cpu device
         # see https://discuss.pytorch.org/t/on-a-cpu-device-how-to-load-checkpoint-saved-on-gpu-device/349/3
         checkpoint = torch.load(
             filename, map_location=lambda storage, loc: storage)
