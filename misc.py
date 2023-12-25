@@ -185,7 +185,7 @@ def train_dqn(model, options, resume):
 
 
 def test_dqn(model, episode):
-    """Test the behavor of dqn when training
+    """Test the behavior of dqn when training
 
        model -- dqn model
        episode -- current training episode
