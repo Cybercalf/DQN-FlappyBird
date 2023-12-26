@@ -173,7 +173,7 @@ def train_dqn(model, options, resume):
             }, True, 'checkpoint-episode-%d.pth.tar' % episode)
         elif episode % options.save_checkpoint_freq == 0:
             save_checkpoint({
-                'episode:': episode,
+                'episode': episode,
                 'epsilon': model.epsilon,
                 'state_dict': model.state_dict(),
                 'time_step': ave_time,
