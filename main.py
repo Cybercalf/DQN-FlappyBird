@@ -33,7 +33,7 @@ parser.add_argument('--max_episode', type=int,
                     help='maximum episode of training',
                     default=20000)
 parser.add_argument('--weight', type=str,
-                    help='weight file name for finetunig(Optional)', default='')
+                    help='weight file name for finetuning(Optional)', default='')
 parser.add_argument('--save_checkpoint_freq', type=int,
                     help='episode interval to save checkpoint', default=2000)
 
